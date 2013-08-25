@@ -1,4 +1,5 @@
 class Tweet < ActiveRecord::Base
+  has_one :location
   attr_accessible :status, :zombie_id, :location
   before_save :has_location?
   after_update :log_update
